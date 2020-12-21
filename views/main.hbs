@@ -1,0 +1,43 @@
+<section id="helloContent">
+    <div class="darkFone"></div>
+    <div id="helloText">
+        <h3>velocycling</h3>
+        <h1>Share your bike route</h1>
+        <p>On our website you can share your bike route or choose a route created by another user</p>
+        <i class="fas fa-chevron-down"></i>
+    </div>
+</section>
+
+<form id="sort-form" action="/sort" method="post" name="sortForm">
+        <select name="sortSelect" class="select">
+            <option value="routeLength">Route Length</option>
+            <option value="countLike">Likes</option>
+        </select>
+        <button class="logInBtn" >Sort</button>
+    </form>
+
+<section id="routsContainer">
+    
+    {{#each cyclRoutes}}
+    <article class="routeItem">
+        <div class="routeItemLeft">
+            <ul id="routUl">
+                <li id="routKm">{{this.routeLength}} km</li>
+                <li id="routLocation">{{this.location}}</li>
+            </ul>
+            <p id="likesCount">{{this.countLike}} <i class="far fa-heart"></i></p>
+        </div>
+
+        <div id={{this._id}} class="map"></div>
+
+ <div class="routContent">
+            <h4 id="routTitle"><a href="/route/{{this._id}}">{{this.routeName}}</a></h4>
+            <p id="routAuthor">author: {{this.routeAuthor.username}}</p>
+            <div id="routContent">{{this.routeText}}</div>
+        </div>
+    </article>
+    <hr>
+    {{/each}}
+</section>
+
+<script defer src="/js/sort.js"></script>

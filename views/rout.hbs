@@ -1,0 +1,50 @@
+<div class="routCont">
+    <section>
+        <h4 id="routTitleLg" class="routTitleLg">{{routeName}}</h4>
+        <hr>
+        <div id='{{roadAuthor._id}}' class="mapLg"></div>
+        <div>
+            {{#each roadAuthor}}
+            <div id="routContent" class="routContentLg">{{routeText}}</div>
+            {{/each}}
+            <p id="routAuthor">Создатель маршрута: {{name}}</p>
+            <ul id="routUl">
+                <li id="routKm">{{distance}} Km</li>
+                <li id="routLocation">{{location}}</li>
+            </ul>
+
+<!--        /route/{{authorIdLike}}-->
+<form id="addLike" method="post" action="/route/{{id}}">
+        <p id="likesCount">{{likes}}
+            {{#if user}}
+            <a><i class="far fa-heart"></i></a>
+            {{else}}
+            <i class="far fa-heart"></i>
+       {{/if}}
+        </p>
+</form>
+
+
+        </div>
+    </section>
+    <section>
+        {{#if user}}
+        <form action="/comment/{{id}}" method="post" name="commentForm" id="commentForm">
+            <label for="comment">Comment</label>
+            <input type="text" name="comment"> <br>
+            <input type="submit" value="Send">
+        </form>
+        {{/if}}
+        <section id="commentsContainer">
+            {{#each comments}}
+            <article id="commentItem">
+                <h4 id="commentAuthor">{{this.authorName}}</h4>
+                <p id="commentBody">{{this.text}}</p>
+            </article>
+            <hr>
+            {{/each}}
+
+        </section>
+</div>
+<script src="/js/comments.js"></script>
+<script src="/js/liker.js"></script>

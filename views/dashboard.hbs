@@ -1,0 +1,29 @@
+<section class="logInSection dachboardSection ">
+  <section class="profile">
+    <div class="userPhoto"></div>
+    <div>
+      <div class="userName profileItem">cyclist: <b> {{user.username}}</b></div>
+      <div class="dateRegistration profileItem">joined our community: <b> 31.12.2018</b></div>
+    </div>
+  </section>
+  <div class="logo">velocycle</div>
+  <section class="logInContainer newRoutForm">
+    <div class="darkFone" id="darkForm"></div>
+    <div>
+      <h2>Add a new route</h2>
+    </div>
+    <form action="/cycling-routes" method="POST" name="routeCreator">
+    <div>
+      <input class="routNameInput" type="text" name="routeName" id="" placeholder="Route name">
+      <input class="routNameInput" type="text" name="location" id="" placeholder="Location">
+      </div>
+      {{!-- <input class="routNameInput" type="text" name="routeTex" id="" placeholder="Description"> --}}
+      <div class="route-map" id="mapClear">    </div>
+      <div>
+      <textarea rows="5" cols="45" name="routeText" placeholder="Description"></textarea>
+      <button class="logInBtn">Create</button>
+      </div>
+    </form>
+    
+  </section>
+</section>

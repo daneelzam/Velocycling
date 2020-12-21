@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    margin-top: 4vh;
+    margin-bottom: 4vh;    
+}
+
+header {
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    background-color: black;
+    opacity: 90%;
+    width: 100vw;
+    padding: 2vh 0;
+    justify-content: center;
+    z-index: 1000;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+header a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+footer {
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    background-color: black;
+    opacity: 90%;
+    width: 100vw;
+    padding: 15px 0;
+    justify-content: center;
+    z-index: 15;
+    color: white;
+}
+
+footer div {
+    margin: 0 15px;
+}
+
+#helloContent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url(https://gorodokboxing.com/wp-content/uploads/2019/07/6-9.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+#helloText {
+    text-align: center;
+    z-index: 10;
+}
+
+.darkFone {
+    position: absolute;
+    background-color: black;
+    min-width: 100vw;
+    min-height: 100vh;
+    opacity: 50%;
+}
+
+#helloContent h3 {
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+}
+
+#helloContent h1 {
+    font-size: 70px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#helloContent p {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    width: 600px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#routsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 15px auto;
+    width: 800px;
+}
+
+.routeItem {
+    display: flex;
+}
+
+.routeItemLeft {
+    width: 200px;
+}
+
+.map {
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    border: black 1px solid;
+    border-radius: 50%;
+}
+
+.routContent {
+    width: 400px;
+    padding-left: 15px;
+}
+
+.routContent {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.routTitle {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.routAuthor {
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 40px;
+}
+
+.routText {
+    font-family: 'Roboto', sans-serif;
+}
+
+hr {
+    opacity: 70%;
+    margin: 15px auto;
+    width: 90%;
+}
+
+.logInSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url(https://media.bikemap.net/geonames/2658434/header_image/80abb8da-218c-411e-9d09-726c7971de67.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logInContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 40px 0px 0px 0px;
+    z-index: 15;
+    color: white;
+}
+.routNameInput {
+    padding: 10px 40px;
+}
+
+input {
+    color: black;
+}
+.select {
+    height: 45px;
+}
+
+.logInBtn {
+    padding: 10px 40px;
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+}
+
+.logInItem {
+    margin: 20px;
+}
+
+#darkForm {
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
+}
+
+#singUpContainer{
+    background-image: url(https://cstor.nn2.ru/userfiles/data/ufiles/2017-11/dd/82/f0/5a0060a41a1cb_21of1.jpg);
+}
+
+.dachboardSection {
+    background-image: url();
+}
+
+.userPhoto {
+    width: 300px;
+    height: 300px;
+    background-image: url(https://journal.rouleur.cc/wp-content/uploads/2017/09/OFS_Alfredo_Binda_01_010525.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile {
+    font-family: Arial, sans-serif;
+    font-weight: lighter;
+    letter-spacing: 3px;
+    display: flex;
+    margin-top: 10%;
+}
+
+.logo {
+    margin: 40px;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.newRoutForm {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    margin-bottom: 5%; 
+}
+
+.newRoutForm h2 {
+    padding-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.profileItem {
+    padding: 15px;
+}
+
+#mapClear {
+    margin: 15px;
+    width: 600px;
+    height: 400px;
+}
+
+.routCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10vh auto;
+    width: 50vw;
+}
+
+.routTitleLg {
+    font-size: 2vw;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.mapLg{
+    height: 40vh;
+    width: 100%;
+}
+
+.routContentLg {
+    width: 40vw;
+    margin-top: 0.5vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1vw;
+}
+
+textarea {
+    color: black
+}

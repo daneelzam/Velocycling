@@ -1,0 +1,20 @@
+    {{#each cyclRoutes}}
+    <article class="routeItem">
+        <div class="routeItemLeft">
+            <ul id="routUl">
+                <li id="routKm">{{this.routeLength}} km</li>
+                <li id="routLocation">{{this.location}}</li>
+            </ul>
+            <p id="likesCount">{{this.countLike}} <i class="far fa-heart"></i></p>
+        </div>
+        
+        <div id={{this._id}} class="map"></div>
+
+        <div class="routContent">
+            <h4 class="routTitle"><a href="#">{{this.routeName}}</a></h4>
+            <p class="routAuthor">author: {{this.routeAuthor.username}}</p>
+            <div class="routText">{{this.routeText}}</div>
+        </div>
+    </article>
+    <hr>
+    {{/each}}

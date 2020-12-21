@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  {{!-- подключаем Handlebars для клиента --}}
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script defer src="https://kit.fontawesome.com/73b845172a.js" crossorigin="anonymous"></script>
+  <script defer src="https://api-maps.yandex.ru/2.1/?apikey=495019b8-7aa4-4f01-b225-49c74a18f036&lang=ru_RU" type="text/javascript"></script>
+  <script defer src="/js/map.js"></script>
+  
+  <script defer src="/js/controlMap.js"></script>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link defer rel="preconnect" href="https://fonts.gstatic.com">
+  <link defer href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+  <link defer rel="stylesheet" type="text/css" href="https://yastatic.net/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link defer rel="stylesheet" href="/css/style.css" type="text/css">
+  
+  <title>{{title}}</title>
+</head>
+
+<body>
+  <header>
+    <a href="/">Main</a>
+    {{#if user}}
+    <a href="/authorization">Hi {{user.username}}</a>
+    <a href="/authorization/logout">Log out</a>
+    {{else}}
+    <a href="/authorization/login">Log In</a>
+    <a href="/authorization/signup">Sing Up</a>
+    {{/if}}
+  </header>
+  <main>
+    {{{body}}}
+  </main>
+  <footer>
+    <div>TDMA production &copy;</div>
+    <div>2020 year</div>
+  </footer>
+</body>
+
+</html>
